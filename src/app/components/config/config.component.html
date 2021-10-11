@@ -1,0 +1,55 @@
+<div>
+    <div class="wrapper">
+      <p-panel header="Contracts">
+        <div class="form-group">
+          <label for="wbnbContract">WNB</label>
+          <input type="string" class="form-control" id="wbnbContract" required [(ngModel)]="config.wbnbContract"
+            name="wbnbContract" />
+        </div>
+
+        <div class="form-group">
+          <label for="usdtContract">USDT</label>
+          <input type="string" class="form-control" id="usdtContract" required [(ngModel)]="config.usdtContract"
+            name="usdtContract" />
+        </div>
+      </p-panel>
+
+      <p-panel header="BSC Main Net URL">
+        <input type="string" class="form-control" id="bscMainNetURL" required [(ngModel)]="config.bscMainNetURL"
+          name="bscMainNetURL" />
+      </p-panel>
+
+      <p-panel header="SwapRouter">
+        <label for="quickSwapRouter">Quick Swap</label>
+        <input type="string" class="form-control" id="quickSwapRouter" required [(ngModel)]="config.quickSwapRouter"
+          name="quickSwapRouter" />
+        <label for="pancakeSwapRouter">Pancake Swap</label>
+        <input type="string" class="form-control" id="pancakeSwapRouter" required [(ngModel)]="config.pancakeSwapRouter"
+          name="pancakeSwapRouter" />
+        <label for="cofeeSwapRouter">Cofee Swap</label>
+        <input type="string" class="form-control" id="cofeeSwapRouter" required [(ngModel)]="config.cofeeSwapRouter"
+          name="cofeeSwapRouter" />
+        <label for="router">Router</label>
+        <input type="string" class="form-control" id="router" required [(ngModel)]="config.router"
+          name="router" />
+      </p-panel>
+
+      <p-panel header="SwapFactory">
+        <label for="quickSwapFactory">Quick Swap</label>
+        <input type="string" class="form-control" id="quickSwapFactory" required [(ngModel)]="config.quickSwapFactory"
+          name="quickSwapFactory" />
+        <label for="pancakeSwapFactory">Pancake Swap</label>
+        <input type="string" class="form-control" id="pancakeSwapFactory" required [(ngModel)]="config.pancakeSwapFactory"
+          name="pancakeSwapFactory" />
+        <label for="cofeeSwapFactory">Cofee Swap</label>
+        <input type="string" class="form-control" id="cofeeSwapFactory" required [(ngModel)]="config.cofeeSwapFactory"
+          name="cofeeSwapFactory" />
+        <label for="factory">Factory</label>
+        <input type="string" class="form-control" id="factory" required [(ngModel)]="config.factory"
+          name="factory" />
+      </p-panel>
+
+      <button (click)="saveConfig()" class="btn btn-success" style="grid-column: 1 / 3;">Save</button>
+    </div>
+    <p-toast></p-toast>
+</div>
