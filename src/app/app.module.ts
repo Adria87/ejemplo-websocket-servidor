@@ -11,8 +11,10 @@ import { ConfigComponent } from './components/config/config.component';
 import { WebSocketComponent } from './components/websocket/websocket.component';
 import { ToastModule } from 'primeng/toast';
 import { PanelModule } from 'primeng/panel';
+import { ListboxModule } from 'primeng/listbox';
 import { MessageService } from 'primeng/api';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { TradePanelComponent } from './components/binance/trade-panel/trade-panel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     TutorialDetailsComponent,
     TutorialsListComponent,
     ConfigComponent,
-    WebSocketComponent
+    WebSocketComponent,
+    TradePanelComponent
   ],
   imports: [
     BrowserModule,
@@ -31,8 +34,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     //Primeng
     ToastModule,
     PanelModule,
+    ListboxModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [MessageService],
   bootstrap: [AppComponent],

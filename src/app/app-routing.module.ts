@@ -5,6 +5,7 @@ import { TutorialDetailsComponent } from './components/tutorial-details/tutorial
 import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
 import { ConfigComponent } from './components/config/config.component';
 import { WebSocketComponent } from './components/websocket/websocket.component';
+import { TradePanelComponent } from './components/binance/trade-panel/trade-panel.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'tutorials', pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'tutorials/:id', component: TutorialDetailsComponent },
   { path: 'add', component: AddTutorialComponent },
   { path: 'config', component: ConfigComponent },
+  { path: 'trade-panel', component: TradePanelComponent },
   { path: 'websocket', component: WebSocketComponent }
 ];
 

@@ -1,18 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Config } from '../models/config.model';
+import { TradePanel } from '../models/trade-panel.model';
 
-const baseUrl = 'http://localhost:8080/api/config';
+const baseUrl = 'http://localhost:8080/api/trade-panel';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ConfigService {
+export class TradePanelService {
 
   constructor(private http: HttpClient) { }
 
-  get(): Observable<Config> {
+  get(): Observable<TradePanel> {
     return this.http.get(`${baseUrl}`);
   }
 

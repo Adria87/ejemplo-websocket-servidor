@@ -1,19 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Config } from '../models/config.model';
+import { ExchangeInfo } from '../models/binance/exchange-info';
 
-const baseUrl = 'http://localhost:8080/api/config';
+const baseUrl = 'https://api.binance.com';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ConfigService {
+export class BinanceApiService {
 
   constructor(private http: HttpClient) { }
 
-  get(): Observable<Config> {
-    return this.http.get(`${baseUrl}`);
+  getExchangeInfo(): Observable<ExchangeInfo> {
+    return this.http.get(`${baseUrl}/api/v3/exchangeInfo`);
   }
 
   update(data: any): Observable<any> {

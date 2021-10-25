@@ -1,3 +1,9 @@
+/* .submit-form {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+} */
+
 .wrapper {
   display: grid;
   grid-template-columns: 500px 500px;
@@ -8,15 +14,4 @@
   border-radius: 5px;
   padding: 20px;
   font-size: 150%;
-}
-
-.tablero {
-  grid-template-columns: 10px;
-}
-.tablero .selected {
-  background-color: red;
-}
-
-.tablero .empty {
-  background-color: blue;
 }

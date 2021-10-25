@@ -1,0 +1,21 @@
+<div>
+    <div class="wrapper">
+      <p-panel header="Api Keys">
+        <div class="form-group">
+          <label for="binanceApiKey">BINANCE</label>
+          <input type="string" class="form-control" id="binanceApiKey" required [(ngModel)]="tradePanel.binanceApiKey"
+            name="binanceApiKey" />
+        </div>
+
+      </p-panel>
+
+      <p-panel header="Assets">
+        <p-listbox [options]="filterAssets" [(ngModel)]="selectedFilterAssets" [multiple]="true"
+         [filter]="true" [checkbox]="true" [listStyle]="{'max-height':'250px'}" (onChange)="refrescarFilteredSymbols($event)"></p-listbox>
+        <p-listbox [options]="filteredSymbols" [(ngModel)]="filteredSelectedSymbols" [multiple]="true" [filter]="true" [checkbox]="true" optionLabel="symbol" [listStyle]="{'max-height':'250px'}"></p-listbox>
+      </p-panel>
+
+      <button (click)="saveTradePanel()" class="btn btn-success" style="grid-column: 1 / 3;">Save</button>
+    </div>
+    <p-toast></p-toast>
+</div>
