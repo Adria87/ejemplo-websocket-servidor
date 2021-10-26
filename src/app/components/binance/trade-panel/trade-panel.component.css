@@ -15,3 +15,16 @@
   padding: 20px;
   font-size: 150%;
 }
+.panel-trades {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.trade-card {
+  min-width: 460px;
+  max-width: 460px;
+  min-height: 200px;
+  border: 1px blue dotted;
+  margin: 5px;
+}
